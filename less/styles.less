@@ -227,6 +227,18 @@ img{
 		font-size: 14px;
 		padding: 14px 35px 15px;
 	}
+	&--phone{
+		background-image: url('../img/icons/phone-white-ico.png');
+		background-position: 25px center;
+		background-repeat: no-repeat;
+		padding-left: 65px;
+	}
+	&--send{
+		background-image: url('../img/icons/send-ico.png');
+		background-position: 30px center;
+		background-repeat: no-repeat;
+		padding-left: 65px;
+	}
 }
 .client-btn{
 	
@@ -295,19 +307,39 @@ img{
 		margin: 0 auto;
 		&__item{
 			position: relative;
-			margin: 0 0 43px;
-			padding-left: 75px;
 			line-height: 1.3;
-			&:before{
+			span{
+				position: relative;
+				padding-left: 65px;
+				display: block;
+				margin-bottom: 30px;
+				&:before{
+					content: '';
+					display: block;
+					width: 23px;
+					height: 23px;
+					border: 3px solid #493b67;
+					background-color: #fff;
+					border-radius: 50%;
+					position: absolute;
+					top: -4px;
+					left: 0;
+				}
+			}
+			&:after{
 				content: '';
 				display: block;
-				width: 23px;
-				height: 23px;
-				border: 3px solid #493b67;
-				border-radius: 50%;
+				width: 2px;
+				height: 100%;
 				position: absolute;
-				top: -4px;
-				left: 0;
+				top: 24px;
+				left: 13px;
+				background: url('../img/dash-bg2.png') repeat-y left top;
+			}
+			&:last-child{
+				&:after{
+					display: none;
+				}
 			}
 		}
 	}
@@ -454,6 +486,14 @@ img{
 		&__text{
 			padding: 20px 0 35px 50px;
 			position: relative;
+			font-size: 16px;
+			line-height: 1.72;
+			p{
+				margin: 0 0 20px;
+			}
+			b{
+				font-weight: 700;
+			}
 			&:before{
 				content: '';
 				display: block;
@@ -477,7 +517,7 @@ img{
 }
 .ul{
 	padding: 0;
-	margin: 0 0 15px;
+	margin: 0 0 20px;
 	li{
 		position: relative;
 		padding-left: 26px;
@@ -625,26 +665,21 @@ img{
 }
 
 .call-form{
-	width: 640px;
+	
 	&__block{
-		float: left;
-		width: 50%;
 		padding: 0 20px;
+		margin: 0 0 20px;
 	}
 	&__row{
-		margin: 0 -20px 30px;
+		margin: 0 -20px 10px;
 		&:last-child{
 			text-align: center;
 			margin-bottom: 0;
 		}
 	}
-	&-btn{
-		display: inline-block;
-		border: 0;
-	}
 	&-field{
-		font: 18px/20px @fontPT;
-		border: 3px solid transparent;
+		font: 300 18px/20px @fontPT;
+		border: 2px solid #e6e6e6;
 		padding: 15px;
 		background: #fff;
 		color: #201600;
@@ -652,10 +687,13 @@ img{
 		width: 100%;
 	}
 	&-label{
-		font: 28px/30px @fontPT;
-		color: #fff;
+		// font: 300 18px/1.12 @fontOS;
+		color: @black;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.12;
 		display: block;
-		margin-bottom: 17px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -663,24 +701,28 @@ img{
 	position: relative;
 	background: #FFF;
 	width: auto;
-	max-width: 720px;
+	max-width: 520px;
 	margin: 20px auto;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 38px rgba(64, 64, 64, 0.47);
 	&__body{
 		position: relative;
-		padding: 45px;
+		padding: 35px 45px;
 	}
 	.dark-btn{
 		margin: 10px 0 0;
 		line-height: 40px;
 	}
+	.pink-btn{
+		cursor: pointer;
+		border: 0;
+	}
 }
 .popup-text{
-	font: 28px/30px @fontPT;
+	font: 18px/1.64 @fontOS;
 	margin: 0 0 35px;
 }
 .h2-popup-title{
-	font: 36px/38px @fontPT;
+	font: 700 28px/1.12 @fontOS;
 	margin: 0 0 35px;
 	padding: 0;
 	text-align: left;
@@ -690,17 +732,20 @@ img{
 	display: block;
 	cursor: pointer;
 	position: absolute;
-	top: 40px;
-	right: 45px;
-	font-size: 36px;
+	top: 15px;
+	right: 15px;
+	width: 16px;
+	height: 16px;
+	background: url('../img/icons/popup-modal-dismiss.png') no-repeat left top;
+	background-size: contain;
+	.trn;
 	&:hover {
 		opacity: .8;
-		transition: 0.3s;
 	}
 }
-.popup-modal-dismiss.blue-btn{
-	display: inline-block;
-	cursor: pointer;
+.mfp-bg {
+    background: rgba(0, 0, 0, 0.47);
+    opacity: 1;
 }
 .error {
   border-color: #EF5E5E!important;
